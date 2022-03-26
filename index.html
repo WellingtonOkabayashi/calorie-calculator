@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Wellington Okabayashi" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Calorias</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="">
+    <header></header>
+    <main class="">
+      <section class="calculadora" id="calc">
+        <div class="container">
+          <form action="" method="POST" id="calculadora-masculina">
+            <div class="box">
+              <h3>Calculadora de Calorias</h3>
+              <blockquote>
+                Lembrando que está calculadora fornece apenas uma estimativa, e
+                não substitui a avaliação de um profissional da Saúde .
+              </blockquote>
+              <div class="info">
+                <label for="Sexo">Seu sexo:</label>
+                <select id="Sexo">
+                  <option value="homen">Masculino</option>
+                  <option value="mulher">Feminino</option>
+                </select>
+
+                <label for="peso">Peso:</label>
+                <input
+                  type="number"
+                  step="0.01"
+                  min="0.0"
+                  max="200.0"
+                  name="peso"
+                  id="peso"
+                  placeholder="Peso exemplo : 85.5"
+                  required
+                  autofocus
+                />
+              </div>
+              <div class="info">
+                <label for="altura">Altura:</label>
+                <input
+                  type="number"
+                  name="altura"
+                  id="altura"
+                  placeholder="Altura em cm : 180"
+                  required
+                />
+              </div>
+              <div class="info">
+                <label for="idade">Idade:</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  name="idade"
+                  id="idade"
+                  placeholder="Sua idade"
+                  required
+                />
+              </div>
+              <div class="info" id="fator">
+                <label for="fator-atividade">Fator de atividade:</label>
+                <select id="fact">
+                  <option value="1.2">Sedentário</option>
+                  <option value="1.375">Pouca atividade</option>
+                  <option value="1.55">Atividade moderada</option>
+                  <option value="1.725">Atividade intensa</option>
+                  <option value="1.9">Atividade muito intensa</option>
+                </select>
+              </div>
+
+              <button type="submit" id="submit">Calcular</button>
+              <button type="reset" id="reset">Limpar</button>
+
+              <div id="dailyCal"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="js/main.js"></script>
+</html>
